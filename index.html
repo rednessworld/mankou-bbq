@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ManKou BBQ 满口香 — Auténtica Barbacoa China en Barcelona</title>
+  <meta name="description" content="ManKou BBQ 满口香 — Auténtica barbacoa china con los mejores cortes de carne en el Eixample de Barcelona. Reserva tu mesa vía WhatsApp.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mankoubbq.vercel.app/">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://mankoubbq.vercel.app/">
+  <meta property="og:title"       content="ManKou BBQ 满口香 — Barbacoa China Premium · Barcelona">
+  <meta property="og:description" content="Auténtica barbacoa china con cortes premium cocinados a la brasa en el corazón de Barcelona.">
+  <meta property="og:image"       content="images/og-image.jpg">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale"      content="es_ES">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="ManKou BBQ 满口香 — Barcelona">
+  <meta name="twitter:description" content="Auténtica barbacoa china premium en Barcelona.">
+  <meta name="twitter:image"       content="images/og-image.jpg">
+
+  <!-- Favicons & PWA -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#1a1204">
+
+  <!-- Google Fonts: Bebas Neue + DM Sans (CDN, no local files) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+
+  <!-- Hero image preload (LCP) -->
+  <link rel="preload" as="image" href="images/Hero1.png" fetchpriority="high">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/print.css" media="print">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "ManKou BBQ 满口香",
+    "image": "https://mankoubbq.vercel.app/images/og-image.jpg",
+    "url": "https://mankoubbq.vercel.app/",
+    "telephone": "+34600000000",
+    "servesCuisine": ["Chinese", "Barbecue", "Asian"],
+    "priceRange": "€€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Carrer de la Diputació, 424",
+      "addressLocality": "Barcelona",
+      "postalCode": "08013",
+      "addressRegion": "Catalunya",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.3936,
+      "longitude": 2.1744
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday","Wednesday","Thursday"],
+        "opens": "13:00",
+        "closes": "16:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday","Wednesday","Thursday"],
+        "opens": "20:00",
+        "closes": "23:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Friday","Saturday","Sunday"],
+        "opens": "13:00",
+        "closes": "16:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Friday","Saturday","Sunday"],
+        "opens": "20:00",
+        "closes": "00:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": 4.8,
+      "reviewCount": 234
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+<!-- ░░ BACKGROUND TEXTURE ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<div class="bg-texture" aria-hidden="true"></div>
+
+<!-- ░░ LOADING SCREEN ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<div id="loader" class="loader" role="status" aria-label="Cargando ManKou BBQ">
+  <img src="images/mainlogo.png" alt="ManKou BBQ" class="loader__logo">
+  <div class="loader__dots" aria-hidden="true">
+    <span class="loader__dot"></span>
+    <span class="loader__dot"></span>
+    <span class="loader__dot"></span>
+  </div>
+</div>
+
+<!-- ░░ NOISE TEXTURE ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<!-- ░░ SKIP NAV ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<a href="#main-content" class="skip-nav" data-i18n="a11y.skip">Saltar al contenido</a>
+
+<!-- ░░ NAVIGATION ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<nav id="nav" aria-label="Navegación principal" data-i18n-aria="nav.aria">
+  <div class="container nav__inner">
+
+    <!-- Logo -->
+    <a href="#" class="nav__logo" aria-label="ManKou BBQ — Inicio">
+      <img src="images/mainlogo.png" alt="ManKou BBQ 满口香" class="nav__logo-img">
+    </a>
+
+    <!-- Mobile overlay (links + lang) -->
+    <div id="nav-links" class="nav__links" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+      <ul>
+        <li><a href="#about"   class="nav__link" data-i18n="nav.about">Nosotros</a></li>
+        <li><a href="#menu"    class="nav__link" data-i18n="nav.menu">Carta</a></li>
+        <li><a href="#gallery" class="nav__link" data-i18n="nav.gallery">Galería</a></li>
+        <li><a href="#reviews" class="nav__link" data-i18n="nav.reviews">Opiniones</a></li>
+        <li><a href="#find-us" class="nav__link" data-i18n="nav.findus">Encuéntranos</a></li>
+      </ul>
+
+      <!-- Lang switcher — mobile menu -->
+      <div class="nav__lang nav__lang--mobile" aria-label="Seleccionar idioma">
+        <button class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+        <button class="lang-btn" data-lang="ca" aria-pressed="false">CA</button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+
+      <!-- Reserve button — mobile menu -->
+      <a href="#find-us" class="btn btn--primary nav__reserve--mobile" data-i18n="nav.reserve">Reservar</a>
+    </div>
+
+    <!-- Desktop right side -->
+    <div class="nav__right">
+      <!-- Lang switcher — desktop -->
+      <div class="nav__lang nav__lang--desktop" aria-label="Seleccionar idioma">
+        <button class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+        <button class="lang-btn" data-lang="ca" aria-pressed="false">CA</button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+
+      <!-- Reserve button — desktop -->
+      <a href="#find-us" class="nav__reserve" data-i18n="nav.reserve">Reservar</a>
+
+      <!-- Hamburger -->
+      <button
+        id="nav-toggle"
+        class="nav__toggle"
+        aria-expanded="false"
+        aria-controls="nav-links"
+        data-i18n-aria="nav.open"
+        aria-label="Abrir menú"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+  </div>
+</nav>
+
+<!-- ░░ MAIN CONTENT ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<main id="main-content">
+
+  <!-- ▓▓ HERO ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
+  <section id="hero" aria-label="Hero">
+    <!-- Background -->
+    <div class="hero__bg">
+      <picture>
+        <img
+          id="hero-parallax-img"
+          src="images/Hero1.png"
+          alt=""
+          fetchpriority="high"
+          loading="eager"
+        >
+      </picture>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__glow"   aria-hidden="true"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="hero__content">
+      <h1 class="sr-only">ManKou BBQ 满口香 — Auténtica Barbacoa China en Barcelona</h1>
+      <div class="hero__unit">
+        <img
+          src="images/mainlogo.png"
+          alt="ManKou BBQ 满口香"
+          class="hero__logo"
+        >
+        <h2 class="hero__title">
+          <span data-i18n="hero.title">El Arte del</span>
+          <em data-i18n="hero.title.em">Fuego y el Sabor</em>
+        </h2>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ▓▓ ABOUT ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about__grid">
+
+        <!-- Text -->
+        <div class="about__text">
+          <h2 class="about__heading reveal--heading" data-i18n="about.heading">
+            Sabores que llenan la boca
+          </h2>
+          <p class="reveal" style="transition-delay: var(--stagger)" data-i18n="about.p1">
+            ManKou BBQ (满口香, «Boca llena de fragancia») nació de la pasión por la barbacoa china auténtica. Seleccionamos cada corte con precisión, marinamos con recetas familiares transmitidas durante generaciones y los cocinamos sobre carbón de binchotan para un sabor puro e inigualable.
+          </p>
+          <p class="reveal" style="transition-delay: calc(var(--stagger) * 2)" data-i18n="about.p2">
+            En pleno Eixample barcelonés, hemos creado un espacio donde el ambiente industrial y sofisticado potencia cada bocado. Ven a vivir una experiencia que fusiona la tradición culinaria china con la mejor materia prima del Mediterráneo.
+          </p>
+
+        </div>
+
+        <!-- Image -->
+        <div class="about__image-wrap reveal--scale">
+          <picture>
+            <img
+              src="images/food6.jpg"
+              alt="Costilla de ternera cocinada a la brasa de carbón de binchotan"
+              class="about__image"
+              loading="lazy"
+              decoding="async"
+            >
+          </picture>
+          <div class="about__image-frame" aria-hidden="true"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ▓▓ MENU ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
+  <section id="menu" class="section">
+    <div class="container">
+
+      <!-- Section header -->
+      <div class="section-header">
+        <h2 class="reveal--heading" data-i18n="menu.heading">Cortes Selectos</h2>
+        <p class="reveal" style="transition-delay:var(--stagger);color:var(--text-muted);max-width:520px" data-i18n="menu.sub">
+          Cortes seleccionados, marinados en casa, cocinados a la brasa
+        </p>
+      </div>
+
+      <!-- Featured food showcase grid -->
+      <div class="menu-showcase stagger-group" aria-hidden="true">
+        <div class="menu-showcase__item reveal">
+          <img src="images/food1.jpg" alt="Corte premium ManKou BBQ" class="menu-showcase__img" loading="lazy" decoding="async">
+          <div class="menu-showcase__overlay"></div>
+          <span class="menu-showcase__label">Wagyu A5</span>
+        </div>
+        <div class="menu-showcase__item reveal">
+          <img src="images/food2.jpg" alt="Mariscos a la brasa ManKou BBQ" class="menu-showcase__img" loading="lazy" decoding="async">
+          <div class="menu-showcase__overlay"></div>
+          <span class="menu-showcase__label">Mariscos</span>
+        </div>
+        <div class="menu-showcase__item reveal">
+          <img src="images/food3.jpg" alt="Verduras a la brasa ManKou BBQ" class="menu-showcase__img" loading="lazy" decoding="async">
+          <div class="menu-showcase__overlay"></div>
+          <span class="menu-showcase__label">Verduras</span>
+        </div>
+        <div class="menu-showcase__item reveal">
+          <img src="images/food4.jpg" alt="Cerdo ibérico ManKou BBQ" class="menu-showcase__img" loading="lazy" decoding="async">
+          <div class="menu-showcase__overlay"></div>
+          <span class="menu-showcase__label">Ibérico</span>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="menu__tabs-wrap">
+        <div class="menu__tabs" role="tablist" aria-label="Categorías del menú">
+          <button
+            class="menu__tab menu__tab--active"
+            role="tab"
+            id="tab-carnes"
+            aria-selected="true"
+            aria-controls="panel-carnes"
+            data-i18n="menu.tab.carnes"
+          >Carnes</button>
+          <button
+            class="menu__tab"
+            role="tab"
+            id="tab-mariscos"
+            aria-selected="false"
+            aria-controls="panel-mariscos"
+            tabindex="-1"
+            data-i18n="menu.tab.mariscos"
+          >Mariscos</button>
+          <button
+            class="menu__tab"
+            role="tab"
+            id="tab-verduras"
+            aria-selected="false"
+            aria-controls="panel-verduras"
+            tabindex="-1"
+            data-i18n="menu.tab.verduras"
+          >Verduras</button>
+          <button
+            class="menu__tab"
+            role="tab"
+            id="tab-extras"
+            aria-selected="false"
+            aria-controls="panel-extras"
+            tabindex="-1"
+            data-i18n="menu.tab.extras"
+          >Extras</button>
+        </div>
+      </div>
+
+      <!-- Panel: Carnes -->
+      <div id="panel-carnes" role="tabpanel" aria-labelledby="tab-carnes">
+        <div class="menu__list stagger-group">
+
+          <article class="menu-item reveal">
+            <div class="menu-item__body">
+              <div class="menu-item__header">
+                <h3 class="menu-item__name" data-i18n="menu.wagyu.name">Wagyu A5 Japonés</h3>
+                <span class="menu-item__cn" data-i18n="menu.wagyu.cn">和牛A5</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.wagyu.desc">Lomo de wagyu de Kagoshima, marmorado premium, 100g</p>
+            </div>
+            <span class="menu-item__price" data-i18n="menu.wagyu.price">€38</span>
+          </article>
+
+          <article class="menu-item reveal">
+            <div class="menu-item__body">
+              <div class="menu-item__header">
+                <h3 class="menu-item__name" data-i18n="menu.costilla.name">Costilla de Ternera</h3>
+                <span class="menu-item__cn" data-i18n="menu.costilla.cn">牛仔骨</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.costilla.desc">Costillas cortas en adobo de soja, jengibre y ajo, 200g</p>
+            </div>
+            <span class="menu-item__price" data-i18n="menu.costilla.price">€24</span>
+          </article>
+
+          <article class="menu-item reveal">
+            <div class="menu-item__body">
+              <div class="menu-item__header">
+                <h3 class="menu-item__name" data-i18n="menu.iberico.name">Secreto Ibérico</h3>
+                <span class="menu-item__cn" data-i18n="menu.iberico.cn">伊比利亚里脊</span>
+                <span class="chip" data-i18n="menu.iberico.chip">Favorito</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.iberico.desc">Cerdo ibérico de bellota, marinado en salsa de sésamo y miso</p>
+            </div>
+            <span class="menu-item__price" data-i18n="menu.iberico.price">€18</span>
+          </article>
+
+          <article class="menu-item reveal">
+            <div class="menu-item__body">
+              <div class="menu-item__header">
+                <h3 class="menu-item__name" data-i18n="menu.pato.name">Pechuga de Pato</h3>
+                <span class="menu-item__cn" data-i18n="menu.pato.cn">鸭胸片</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.pato.desc">Pato de Barbería glaseado con miel y soja envejecida</p>
+            </div>
+            <span class="menu-item__price" data-i18n="menu.pato.price">€16</span>
+          </article>
+
+          <article class="menu-item reveal">
+            <div class="menu-item__body">
+              <div class="menu-item__header">
+                <h3 class="menu-item__name" data-i18n="menu.cerdo.name">Panceta de Cerdo</h3>
+                <span class="menu-item__cn" data-i18n="menu.cerdo.cn">五花肉</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.cerdo.desc">Panceta de cerdo cortada fina, caramelizada a la brasa</p>
+            </div>
+            <span class="menu-item__price" data-i18n="menu.cerdo.price">€14</span>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Panel: Mariscos -->
+      <div id="panel-mariscos" role="tabpanel" aria-labelledby="tab-mariscos" class="menu__panel--hidden">
+        <div class="menu__list stagger-group">
+
+          <article class="menu-item reveal">
+            <div class="menu-item__body">
+              <div class="menu-item__header">
+                <h3 class="menu-item__name" data-i18n="menu.gambas.name">Gambas Tigre</h3>
+                <span class="menu-item__cn" data-i18n="menu.gambas.cn">虎虾</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.gambas.desc">Gambas de Palamós a la brasa con mantequilla de ajo y cebollino</p>
+            </div>
+            <span class="menu-item__price" data-i18n="menu.gambas.price">€18</span>
+          </article>
+
+          <article class="menu-item reveal">
+            <div class="menu-item__body">
+              <div class="menu-item__header">
+                <h3 class="menu-item__name" data-i18n="menu.vieiras.name">Vieiras al Miso</h3>
+                <span class="menu-item__cn" data-i18n="menu.vieiras.cn">味噌扇贝</span>
+                <span class="chip" data-i18n="menu.vieiras.chip">Chef</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.vieiras.desc">Vieiras gallegas con pasta de miso blanco y mantequilla de yuzu</p>
+            </div>
+            <span class="menu-item__price" data-i18n="menu.vieiras.price">€22</span>
+          </article>
+
+          <article class="menu-item reveal">
+            <div class="menu-item__body">
+              <div class="menu-item__header">
+                <h3 class="menu-item__name" data-i18n="menu.calamar.name">Calamar a la Brasa</h3>
+                <span class="menu-item__cn" data-i18n="menu.calamar.cn">炭烤鱿鱼</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.calamar.desc">Calamar mediterráneo marinado en salsa de ostras y aceite de sésamo</p>
+            </div>
+            <span class="menu-item__price" data-i18n="menu.calamar.price">€14</span>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Panel: Verduras -->
+      <div id="panel-verduras" role="tabpanel" aria-labelledby="tab-verduras" class="menu__panel--hidden">
+        <div class="menu__list stagger-group">
+
+          <article class="menu-item reveal">
+            <div class="menu-item__body">
+              <div class="menu-item__header">
+                <h3 class="menu-item__name" data-i18n="menu.maiz.name">Maíz a la Brasa</h3>
+                <span class="menu-item__cn" data-i18n="menu.maiz.cn">烤玉米</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.maiz.desc">Maíz dulce con mantequilla de miso y furikake de sésamo negro</p>
+            </div>
+            <span class="menu-item__price" data-i18n="menu.maiz.price">€7</span>
+          </article>
+
+          <article class="menu-item reveal">
+            <div class="menu-item__body">
+              <div class="menu-item__header">
+                <h3 class="menu-item__name" data-i18n="menu.setas.name">Setas Mixtas</h3>
+                <span class="menu-item__cn" data-i18n="menu.setas.cn">什锦菇</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.setas.desc">Shiitake, enoki y seta ostra con salsa ponzu y aceite de trufa</p>
+            </div>
+            <span class="menu-item__price" data-i18n="menu.setas.price">€9</span>
+          </article>
+
+          <article class="menu-item reveal">
+            <div class="menu-item__body">
+              <div class="menu-item__header">
+                <h3 class="menu-item__name" data-i18n="menu.berenjena.name">Berenjena con Miso</h3>
+                <span class="menu-item__cn" data-i18n="menu.berenjena.cn">味噌茄子</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.berenjena.desc">Berenjenas japonesas glaseadas con pasta dengaku de miso rojo</p>
+            </div>
+            <span class="menu-item__price" data-i18n="menu.berenjena.price">€8</span>
+          </article>
+
+          <article class="menu-item reveal">
+            <div class="menu-item__body">
+              <div class="menu-item__header">
+                <h3 class="menu-item__name" data-i18n="menu.esparragos.name">Espárragos Verdes</h3>
+                <span class="menu-item__cn" data-i18n="menu.esparragos.cn">芦笋</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.esparragos.desc">Espárragos de Navarra con vinagreta de sésamo negro y ralladura de yuzu</p>
+            </div>
+            <span class="menu-item__price" data-i18n="menu.esparragos.price">€8</span>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Panel: Extras -->
+      <div id="panel-extras" role="tabpanel" aria-labelledby="tab-extras" class="menu__panel--hidden">
+        <div class="menu__list stagger-group">
+
+          <article class="menu-item reveal">
+            <div class="menu-item__body">
+              <div class="menu-item__header">
+                <h3 class="menu-item__name" data-i18n="menu.arroz.name">Arroz Frito</h3>
+                <span class="menu-item__cn" data-i18n="menu.arroz.cn">炒饭</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.arroz.desc">Arroz frito al wok con huevo, cebollino y salsa de soja</p>
+            </div>
+            <span class="menu-item__price" data-i18n="menu.arroz.price">€8</span>
+          </article>
+
+          <article class="menu-item reveal">
+            <div class="menu-item__body">
+              <div class="menu-item__header">
+                <h3 class="menu-item__name" data-i18n="menu.kimchi.name">Kimchi de la Casa</h3>
+                <span class="menu-item__cn" data-i18n="menu.kimchi.cn">泡菜</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.kimchi.desc">Kimchi de col china fermentado artesanalmente</p>
+            </div>
+            <span class="menu-item__price" data-i18n="menu.kimchi.price">€5</span>
+          </article>
+
+          <article class="menu-item reveal">
+            <div class="menu-item__body">
+              <div class="menu-item__header">
+                <h3 class="menu-item__name" data-i18n="menu.salsabbq.name">Salsa BBQ Casera</h3>
+                <span class="menu-item__cn" data-i18n="menu.salsabbq.cn">自制BBQ酱</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.salsabbq.desc">Salsa BBQ de receta secreta con especias chinas y toques ahumados</p>
+            </div>
+            <span class="menu-item__price" data-i18n="menu.salsabbq.price">€3</span>
+          </article>
+
+          <article class="menu-item reveal">
+            <div class="menu-item__body">
+              <div class="menu-item__header">
+                <h3 class="menu-item__name" data-i18n="menu.edamame.name">Edamame</h3>
+                <span class="menu-item__cn" data-i18n="menu.edamame.cn">毛豆</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.edamame.desc">Vainas de soja al vapor con sal marina y aceite de sésamo</p>
+            </div>
+            <span class="menu-item__price" data-i18n="menu.edamame.price">€5</span>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="menu__cta-wrap">
+        <a href="#find-us" class="btn btn--secondary reveal" data-i18n="menu.cta">Reservar una mesa</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ▓▓ GALLERY ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
+  <section id="gallery" class="section">
+    <div class="container">
+
+      <div class="section-header">
+        <h2 class="reveal--heading" data-i18n="gallery.heading">Cada Plato, una Obra</h2>
+        <p class="reveal" style="transition-delay:var(--stagger);color:var(--text-muted)" data-i18n="gallery.sub">
+          Fotografías reales de nuestra cocina
+        </p>
+      </div>
+
+      <div class="gallery__grid stagger-group">
+        <div class="gallery__item reveal">
+          <img src="images/food5.jpg"  alt="Selección de cortes premium sobre bandeja de madera, ManKou BBQ" class="gallery__img" loading="lazy" decoding="async">
+        </div>
+        <div class="gallery__item reveal">
+          <img src="images/food6.jpg"  alt="Costilla de ternera cocinada a la brasa de carbón de binchotan" class="gallery__img" loading="lazy" decoding="async">
+        </div>
+        <div class="gallery__item reveal">
+          <img src="images/food7.jpg"  alt="Gambas tigre de Palamós con mantequilla de ajo a la brasa" class="gallery__img" loading="lazy" decoding="async">
+        </div>
+        <div class="gallery__item reveal">
+          <img src="images/food8.jpg"  alt="Berenjena japonesa glaseada con pasta de miso dengaku" class="gallery__img" loading="lazy" decoding="async">
+        </div>
+        <div class="gallery__item reveal">
+          <img src="images/food10.jpg" alt="Wagyu A5 de Kagoshima rebanado, con veteado premium visible" class="gallery__img" loading="lazy" decoding="async">
+        </div>
+        <div class="gallery__item reveal">
+          <img src="images/food11.jpg" alt="Setas shiitake, enoki y seta ostra con salsa ponzu y aceite de trufa" class="gallery__img" loading="lazy" decoding="async">
+        </div>
+        <div class="gallery__item reveal">
+          <img src="images/food12.jpg" alt="Vieiras gallegas con pasta de miso blanco y mantequilla de yuzu" class="gallery__img" loading="lazy" decoding="async">
+        </div>
+        <div class="gallery__item reveal">
+          <img src="images/food13.jpg" alt="Presentación de cortes de carne premium listos para la parrilla" class="gallery__img" loading="lazy" decoding="async">
+        </div>
+      </div>
+
+      <div class="gallery__cta-wrap">
+        <a
+          href="https://www.instagram.com/mankoubbq"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn--secondary reveal"
+          data-i18n="gallery.cta"
+        >Síguenos en Instagram</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ▓▓ REVIEWS ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
+  <section id="reviews" class="section">
+    <div class="container">
+
+      <div class="section-header">
+        <h2 class="reveal--heading" data-i18n="reviews.heading">Lo que Dicen Nuestros Clientes</h2>
+
+        <!-- Average rating -->
+        <div class="reviews__summary reveal">
+          <span class="reviews__avg">4.8</span>
+          <div class="reviews__stars">
+            <div class="stars" aria-label="4.8 de 5 estrellas">
+              <!-- Star SVG x5 -->
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+            </div>
+            <span class="reviews__count" data-i18n="reviews.count">234 opiniones en Google</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review cards -->
+      <div class="reviews__grid stagger-group">
+
+        <article class="review-card reveal">
+          <div class="review-card__stars" aria-label="5 de 5 estrellas">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+          </div>
+          <blockquote class="review-card__text">
+            Una experiencia gastronómica única en Barcelona. El wagyu se deshace en la boca y el ambiente es increíble. Volveré sin dudarlo.
+          </blockquote>
+          <p class="review-card__author">Ana García</p>
+        </article>
+
+        <article class="review-card reveal">
+          <div class="review-card__stars" aria-label="5 de 5 estrellas">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+          </div>
+          <blockquote class="review-card__text">
+            El millor BBQ asiàtic que he provat a la ciutat. Les carns són d'una qualitat excepcional i el servei és impecable. Molt recomanable!
+          </blockquote>
+          <p class="review-card__author">Marc Puigdomènech</p>
+        </article>
+
+        <article class="review-card reveal">
+          <div class="review-card__stars" aria-label="5 de 5 estrellas">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+          </div>
+          <blockquote class="review-card__text">
+            Absolutely incredible. The binchotan charcoal gives everything such a unique, clean flavour. The wagyu and miso scallops were outstanding. A must-visit in Barcelona!
+          </blockquote>
+          <p class="review-card__author">Sarah Chen</p>
+        </article>
+
+        <article class="review-card reveal">
+          <div class="review-card__stars" aria-label="5 de 5 estrellas">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84L18 6.77l-4 3.9.94 5.49L10 13.77l-4.94 2.39.94-5.49-4-3.9 5.61-.93z"/></svg>
+          </div>
+          <blockquote class="review-card__text">
+            Ambient impressionant i carn de primera qualitat. El secreto ibérico és el millor que he menjat mai. Perfecte per a una nit especial.
+          </blockquote>
+          <p class="review-card__author">Jordi Mas</p>
+        </article>
+
+      </div>
+
+      <div class="reviews__cta-wrap">
+        <a
+          href="https://www.google.com/maps/place/ManKouBBQ%E6%BB%A1%E5%8F%A3%E9%A6%99/@41.3995836,2.1794865,19z/data=!4m8!3m7!1s0x12a4a37c2a998f59:0xe89a6921e738c31b!8m2!3d41.3995836!4d2.1794865!9m1!1b1!16s%2Fg%2F11x6pk74yt?authuser=0&entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn--ghost reveal"
+          data-i18n="reviews.cta"
+        >Ver todas las opiniones</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ▓▓ FIND US ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
+  <section id="find-us" class="section">
+    <div class="container">
+
+      <div class="section-header">
+        <h2 class="reveal--heading findus__heading" data-i18n="findus.heading">Visítanos en Barcelona</h2>
+      </div>
+
+      <div class="findus__grid">
+
+        <!-- Info column -->
+        <div class="findus__info">
+
+          <!-- Address -->
+          <address class="findus__address reveal">
+            <p data-i18n="findus.address.street">Carrer de la Diputació, 424</p>
+            <p data-i18n="findus.address.city">08013 Barcelona</p>
+            <p data-i18n="findus.address.country">España</p>
+            <p style="margin-top:var(--space-3)">
+              <a href="tel:+34600000000" data-i18n="findus.phone">+34 600 000 000</a>
+            </p>
+          </address>
+
+          <!-- Hours -->
+          <div class="findus__hours reveal" style="transition-delay:var(--stagger)">
+            <p class="hours-label" data-i18n="findus.hours.label">Horario</p>
+            <dl>
+              <div class="hours-row">
+                <dt data-i18n="findus.hours.tues">Martes — Jueves</dt>
+                <dd data-i18n="findus.hours.tues.v">13:00–16:00 · 20:00–23:30</dd>
+              </div>
+              <div class="hours-row">
+                <dt data-i18n="findus.hours.frisun">Viernes — Domingo</dt>
+                <dd data-i18n="findus.hours.frisun.v">13:00–16:30 · 20:00–00:00</dd>
+              </div>
+              <div class="hours-row">
+                <dt data-i18n="findus.hours.mon">Lunes</dt>
+                <dd data-i18n="findus.hours.mon.v">Cerrado</dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- WhatsApp card -->
+          <div class="whatsapp-card reveal" style="transition-delay:calc(var(--stagger) * 2)">
+            <h3 class="whatsapp-card__heading" data-i18n="findus.whatsapp.heading">
+              Reservar por WhatsApp
+            </h3>
+            <p class="whatsapp-card__sub" data-i18n="findus.whatsapp.sub">
+              Respuesta rápida · Sin esperas · Confirmación inmediata
+            </p>
+            <a
+              id="whatsapp-card-btn"
+              href="https://wa.me/34600000000?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--whatsapp"
+              data-phone="+34600000000"
+              data-i18n="findus.whatsapp.cta"
+            >
+              <!-- WhatsApp icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.122 1.532 5.857L.057 23.882l6.186-1.621A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.369l-.358-.213-3.722.976 1.003-3.61-.233-.37A9.818 9.818 0 1112 21.818z"/>
+              </svg>
+              Reservar ahora
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Map column -->
+        <div class="findus__map-wrap reveal--scale">
+          <div class="findus__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.4!2d2.1794865!3d41.3995836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a37c2a998f59%3A0xe89a6921e738c31b!2sManKouBBQ%E6%BB%A1%E5%8F%A3%E9%A6%99!5e0!3m2!1sen!2ses!4v1234567890"
+              title="Ubicación de ManKou BBQ — Carrer de la Diputació 424, Barcelona"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ░░ FOOTER ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<footer>
+  <div class="container">
+
+    <div class="ft">
+      <span class="ft__brand">ManKou BBQ 满口香</span>
+
+      <nav class="ft__nav" aria-label="Footer navigation">
+        <a href="#about"       data-i18n="footer.link.about">Nosotros</a>
+        <span aria-hidden="true">·</span>
+        <a href="#menu"        data-i18n="footer.link.menu">Carta</a>
+        <span aria-hidden="true">·</span>
+        <a href="#gallery"     data-i18n="footer.link.gallery">Galería</a>
+        <span aria-hidden="true">·</span>
+        <a href="#find-us"     data-i18n="footer.link.findus">Encuéntranos</a>
+        <span aria-hidden="true">·</span>
+        <a href="privacy.html" data-i18n="footer.link.privacy">Privacidad</a>
+      </nav>
+
+      <address class="ft__contact">
+        <span data-i18n="findus.address.street">Carrer de la Diputació, 424</span>
+        <span aria-hidden="true">·</span>
+        <a href="tel:+34600000000" data-i18n="findus.phone">+34 600 000 000</a>
+      </address>
+    </div>
+
+    <div class="ft__bottom">
+      <p class="ft__copy" data-i18n="footer.copy">© 2026 ManKou BBQ 满口香 · Barcelona</p>
+      <div class="nav__lang" aria-label="Seleccionar idioma">
+        <button class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+        <button class="lang-btn" data-lang="ca" aria-pressed="false">CA</button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ░░ COOKIE BANNER ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<div id="cookie-banner" class="cookie-banner" hidden role="complementary" aria-label="Aviso de cookies">
+  <div class="container">
+    <div class="cookie-banner__inner">
+      <div class="cookie-banner__text">
+        <span data-i18n="cookie.text">Usamos cookies para analizar el tráfico y mejorar tu experiencia. Requerido por el RGPD.</span>
+        <!-- Privacy link is a separate element — NOT inside data-i18n span to survive language switch -->
+        <a href="privacy.html" style="color:var(--gold);margin-left:var(--space-2);font-size:var(--text-xs)" data-i18n="cookie.privacy">Política de privacidad</a>
+      </div>
+      <div class="cookie-banner__actions">
+        <button id="cookie-decline" class="btn btn--ghost btn--sm" data-i18n="cookie.decline">Solo necesarias</button>
+        <button id="cookie-accept"  class="btn btn--primary btn--sm" data-i18n="cookie.accept">Aceptar todo</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ░░ WHATSAPP FAB ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<a
+  id="whatsapp-fab"
+  href="https://wa.me/34600000000"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="whatsapp-fab"
+  data-phone="+34600000000"
+  aria-label="Reservar por WhatsApp"
+  data-i18n-aria="whatsapp.aria"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.122 1.532 5.857L.057 23.882l6.186-1.621A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.369l-.358-.213-3.722.976 1.003-3.61-.233-.37A9.818 9.818 0 1112 21.818z"/>
+  </svg>
+</a>
+
+<!-- ░░ BACK TO TOP ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<button
+  id="back-to-top"
+  class="back-to-top"
+  aria-label="Volver al inicio"
+  data-i18n-aria="btt.label"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+
+<!-- ░░ SCRIPTS ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<!-- i18n must load before main so translations{} is available -->
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
