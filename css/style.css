@@ -605,10 +605,28 @@ h3 {
 
   .nav__link:hover { color: var(--gold); }
 
-  .nav__reserve { display: none; }
+  /* Parent+class specificity (0-2-0) beats base .nav__reserve (0-1-0) */
+  .nav__right .nav__reserve { display: none; }
 
   /* Double-class specificity (0-2-0) beats the base .nav__lang { display: flex } (0-1-0) */
   .nav__lang.nav__lang--desktop { display: none; }
+
+  /* Center logo; nav__logo is absolute so nav__right is the only in-flow flex child */
+  .nav__inner {
+    position: relative;
+  }
+
+  .nav__logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .nav__right {
+    margin-left: auto;
+  }
 
   .nav__lang--mobile {
     display: flex !important;
