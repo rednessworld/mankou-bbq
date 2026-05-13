@@ -133,6 +133,14 @@
 
     <!-- Mobile overlay (links + lang) -->
     <div id="nav-links" class="nav__links" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+
+      <!-- X close button -->
+      <button id="nav-close" class="nav__close" aria-label="Cerrar menú" data-i18n-aria="nav.close">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M4 4L16 16M16 4L4 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+
       <ul>
         <li><a href="#about"   class="nav__link" data-i18n="nav.about">Nosotros</a></li>
         <li><a href="#menu"    class="nav__link" data-i18n="nav.menu">Carta</a></li>

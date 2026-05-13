@@ -444,11 +444,20 @@ h3 {
   transition: background var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
 }
 
+/* backdrop-filter on the element itself would make position:fixed children
+   position relative to #nav in Safari/iOS — use ::before instead */
 #nav.scrolled {
+  box-shadow: 0 1px 0 rgba(242, 202, 80, 0.12);
+}
+
+#nav.scrolled::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background: var(--overlay-nav);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 1px 0 rgba(242, 202, 80, 0.12);
+  z-index: 0;
 }
 
 .nav__inner {
@@ -456,6 +465,8 @@ h3 {
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 /* Logo */
@@ -566,7 +577,7 @@ h3 {
     position: fixed;
     inset: 0;
     padding-top: var(--nav-height);
-    z-index: 199;
+    z-index: 9000;
     flex-direction: column;
     justify-content: center;
     gap: var(--space-2);
@@ -641,7 +652,28 @@ h3 {
   .nav__reserve--mobile {
     display: flex !important;
   }
+
+  /* X close button — top-right of overlay, mirrors hamburger position */
+  .nav__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: calc((var(--nav-height) - var(--touch-min)) / 2);
+    right: var(--container-pad);
+    min-width: var(--touch-min);
+    min-height: var(--touch-min);
+    color: var(--text);
+    border-radius: var(--radius-sm);
+    transition: color var(--dur-fast);
+  }
+
+  .nav__close:hover,
+  .nav__close:focus-visible { color: var(--gold); }
 }
+
+/* Hidden on desktop */
+.nav__close { display: none; }
 
 @media (min-width: 768px) {
   .nav__lang--mobile { display: none !important; }

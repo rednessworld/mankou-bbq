@@ -42,6 +42,10 @@ if (navToggle && navLinks) {
     navLinks.classList.contains('nav__links--open') ? closeNav() : openNav();
   });
 
+  /* X close button inside overlay */
+  const navClose = document.getElementById('nav-close');
+  if (navClose) navClose.addEventListener('click', () => closeNav());
+
   /* Close on any link tap — direct listeners are reliable on touch */
   navLinks.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => closeNav(false));
