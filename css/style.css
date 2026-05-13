@@ -604,14 +604,15 @@ h3 {
 
   .nav__link {
     font-family: var(--font-heading);
-    font-size: var(--text-lg);
-    letter-spacing: 0.1em;
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    letter-spacing: 0.08em;
     color: var(--text);
-    padding: var(--space-4) var(--space-6);
-    min-height: var(--touch-min);
+    padding: var(--space-3) var(--space-6);
+    min-height: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
+    line-height: 1.1;
   }
 
   .nav__link::after { display: none; }
