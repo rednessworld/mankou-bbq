@@ -603,6 +603,7 @@ h3 {
   }
 
   .nav__link {
+    font-family: var(--font-heading);
     font-size: var(--text-lg);
     letter-spacing: 0.1em;
     color: var(--text);
@@ -672,12 +673,10 @@ h3 {
   .nav__close:focus-visible { color: var(--gold); }
 }
 
-/* Hidden on desktop */
-.nav__close { display: none; }
-
 @media (min-width: 768px) {
   .nav__lang--mobile { display: none !important; }
   .nav__reserve--mobile { display: none !important; }
+  .nav__close { display: none; }
 }
 
 /* Reserve button in nav */
