@@ -31,20 +31,20 @@ if (navToggle && navLinks) {
     if (firstLink) firstLink.focus();
   }
 
-  function closeNav() {
+  function closeNav(returnFocus = true) {
     navLinks.classList.remove('nav__links--open');
     navToggle.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
-    navToggle.focus();
+    if (returnFocus) navToggle.focus();
   }
 
   navToggle.addEventListener('click', () => {
     navLinks.classList.contains('nav__links--open') ? closeNav() : openNav();
   });
 
-  /* Close on anchor click */
-  navLinks.addEventListener('click', (e) => {
-    if (e.target.tagName === 'A') closeNav();
+  /* Close on any link tap — direct listeners are reliable on touch */
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => closeNav(false));
   });
 
   /* Focus trap inside mobile menu */
@@ -83,6 +83,12 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     const target   = document.getElementById(targetId);
     if (!target) return;
     e.preventDefault();
+    // Restore body scroll before scrollTo — scrollTo is a no-op while overflow:hidden
+    if (navLinks && navLinks.classList.contains('nav__links--open')) {
+      navLinks.classList.remove('nav__links--open');
+      if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
     const navH = parseInt(getComputedStyle(document.documentElement)
       .getPropertyValue('--nav-height')) || 72;
     const top  = target.getBoundingClientRect().top + window.scrollY - navH - 16;
