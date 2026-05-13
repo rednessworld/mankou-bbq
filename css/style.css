@@ -557,7 +557,10 @@ h3 {
 
 /* Mobile overlay */
 @media (max-width: 767px) {
-  .nav__toggle { display: flex; }
+  .nav__toggle {
+    display: flex;
+    margin-right: calc(-1 * var(--space-2)); /* align icon flush with container edge */
+  }
 
   .nav__links {
     position: fixed;
@@ -604,7 +607,8 @@ h3 {
 
   .nav__reserve { display: none; }
 
-  .nav__lang--desktop { display: none; }
+  /* Double-class specificity (0-2-0) beats the base .nav__lang { display: flex } (0-1-0) */
+  .nav__lang.nav__lang--desktop { display: none; }
 
   .nav__lang--mobile {
     display: flex !important;
